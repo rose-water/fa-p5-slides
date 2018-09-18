@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="../css/custom.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script>
 </head>
 
 <body>
@@ -195,7 +196,7 @@
         <h5>P5.js Art (move your mouse around!)</h5>
         
         <div class="child-slide-body">
-          
+          Code by <a href="https://codepen.io/valhead/pen/NABYow?editors=0010" target="_blank">Val Head</a>
         </div>
       </section>
 
@@ -301,20 +302,10 @@
       slideNumber: true,
       slideNumber: 'c/t'
     });
-  
   }
 
-  var sketch = function(p) {
-    p.setup = function(){
-      p.createCanvas(500, 500);
-      p.background(13, 13, 29);
-    }
-  };
-
-  // example 1
-  var node = document.createElement('div');
-  document.getElementById('example-1').appendChild(node);
-  new p5(sketch, node);
+  // ---------------------------------------------
 </script>
 
+<script src="../js/sketch_1.js"></script>
 </html>
