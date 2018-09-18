@@ -495,7 +495,7 @@
                     
                     function draw() { 
                       background(0, 0, 0);
-                      ellipse(150, 150, 100, 100);
+                      <mark>ellipse(150, 150, 100, 100);</mark>
                     }
                   </code>
                 </pre>
@@ -540,7 +540,7 @@
                     
                     function draw() { 
                       background(0, 0, 0);
-                      rect(50, 50, 250, 100);
+                      <mark>rect(50, 50, 250, 100);</mark>
                     }
                   </code>
                 </pre>
@@ -555,16 +555,49 @@
         <h5>Color: Fill & Stroke</h5>
         <div class="sub-head">
           <div class="sub-head-text">
-            <span></span>
+            <span><code>fill(redValue, greenValue, blueValue)</code></span>
           </div>
         </div>
         <div class="child-slide-body">
           <ul class="child-slide-body-list">
             <li>
               <div class="list-item-container">
+                +<span>Colors are defined with 3 values, corresponding to red, green, and blue color channels</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Each color channel can have a value between 0-255</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><code>(0, 0, 0)</code> will be black, and <code>(255, 255, 255)</code> will be white</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>To change the fill color of the circle, we have to set it before drawing the ellipse</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Play around with color combinations!</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
                 <pre>
                   <code data-trim data-noescape>
+                    function setup() {
+                      createCanvas(400, 400);
+                    } 
                     
+                    function draw() { 
+                      background(0, 0, 0);
+                      <mark>fill(130, 40, 150);</mark>
+                      ellipse(150, 150, 100, 100);
+                    }
                   </code>
                 </pre>
               </div>
@@ -573,7 +606,87 @@
         </div>
       </section>
 
-     <!-- END SLIDES -->
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Color: Fill & Stroke</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span><code>stroke(redValue, greenValue, blueValue) & strokeWeight(amount)</code></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Your shapes can have borders, or a 'stroke'</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><code>stroke(0, 255, 255)</code> sets the color of the stroke</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><code>strokeWeight(5)</code> sets the thickness of the stroke (in pixels)</span>
+              </div>
+            </li>
+            
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    function setup() { 
+                      createCanvas(400, 400);
+                    } 
+                    
+                    function draw() { 
+                      background(0, 0,0);
+                      fill(130, 40, 150);
+                      <mark>strokeWeight(5);</mark>
+                      <mark>stroke(0, 255, 255);</mark>
+                      ellipse(150, 150, 100, 100);
+                    }
+                  </code>
+                </pre>
+              </div>
+            </li>
+
+            
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+      <h5>Try at home!</h5>
+      <div class="sub-head">
+        <div class="sub-head-text">
+          <span>Play around with these exercises</span>
+        </div>
+      </div>
+      <div class="child-slide-body">
+        <ul class="child-slide-body-list">
+          <li>
+            <div class="list-item-container">
+              +<span>Mess around with shapes: sizes, colors</span>
+            </div>
+          </li>
+          <li>
+            <div class="list-item-container">
+              +<span>Draw 10 circles next to each other, with different colors</span>
+            </div>
+          </li>
+          <li>
+            <div class="list-item-container">
+              +<span>Explore the <a href="https://p5js.org/reference/" target="_blank">reference</a> online (don't be intimidated! ☺️)</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- END SLIDES -->
     </div>
   </div>
 </body>
