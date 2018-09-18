@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:100,200,500|Source+Code+Pro:200,300,400');
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0d0d1d;
+  overflow: hidden;
+}
+
+div.sub-head-text {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 300;
+  font-size: 0.8em;
+  color: #ff6efc;
+  text-transform: uppercase;
+}
+
+h3.title-text {
+  font-family: "Source Code Pro", monospace!important;
+  font-weight: 300!important;
+  color: #1bc4ff!important;
+}
+
+h3, h5 {
+  font-family: "Source Code Pro", monospace!important;
+  font-weight: 300!important;
+  text-transform: uppercase;
+  color: #1bc4ff!important;
+  margin-bottom: 12px!important;
+}
+
+div.disclaimer, div.title-slide-body {
+  font-family: "Source Code Pro", monospace;
+  font-size: 14px;
+  padding: 32px;
+  line-height: 32px;
+}
+
+div.child-slide-body {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 200;
+  font-size: 22px;
+  padding: 32px 0px 32px 0px;
+}
+
+ul > li {
+  list-style-type: none;
+}
+
+.reveal ul ul.ball {
+  text-align: center!important;
+}
+
+div.wrapper {
+  text-align: center;
+}
+
+div.list-item-container > span {
+  padding-left: 16px;
+}
+
+div.list-item-container {
+  padding: 8px 0px 8px 0px;
+}
+
+span.reading-indicator {
+  font-weight: 500;
+  color: #c10bf4;
+}
+
+img.child-slide-img {
+  display: block!important;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  border: none!important;
+}
+
+.hljs {
+  background: #070b13!important;
+}
+
+.reveal pre {
+  font-size: 0.6em!important;
+  box-shadow: none!important;
+  margin: 0px auto!important; 
+  width: 100%!important;
+  cursor: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/3174/cursor.png), auto!important;
+}
+
+mark {
+  /* background: #0092c3!important; */
+}
+
+.reveal pre code {
+  padding: 16px;
+  max-height: none!important;
+}
+
+.reveal sup {
+  vertical-align: top;
+}
+
+
