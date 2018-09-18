@@ -60,6 +60,11 @@
             </li>
             <li>
               <div class="list-item-container">
+                +<span>Setting up a p5.js Sketch</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
                 +<span>Drawing Basic Shapes</span>
               </div>
             </li>
@@ -192,7 +197,7 @@
       </section>
 
       <!-- ------------- -->
-      <section class="child-slide" id="example-1">
+      <section class="child-slide">
         <h5>P5.js Art (move your mouse around!)</h5>
         
         <div class="child-slide-body">
@@ -212,14 +217,285 @@
           <ul class="child-slide-body-list">
             <li>
               <div class="list-item-container">
+                +<span><code>setup()</code> and <code>draw()</code> are <b>functions</b></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Functions are blocks of code that execute a task</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Functions are defined with a name, followed by parentheses</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
                 <pre>
                   <code data-trim data-noescape>
-                    void setup() {                                
+                    /* gets called once */
+                    function setup() {                                                       
 
                     }
 
-                    void draw() {
+                    /* gets called repeatedly after setup() is called */
+                    function draw() {
 
+                    }
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Setting up a p5.js Sketch</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Setting up your code folder</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                1.<span>Create a folder on your desktop called 'mySketch'</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                2.<span>Inside your 'mySketch' folder, create a file called <code>index.html</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                3.<span>Open your 'mySketch' folder inside of Atom</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Setting up a p5.js Sketch</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Setting up index.html</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                4.<span>Inside of your <code>index.html</code> file, copy and paste the following: </span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    &lt;html&gt;
+                      &lt;head&gt;
+                        &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js&quot;&gt;&lt;/script&gt;
+                        &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.min.js&quot;&gt;&lt;/script&gt;
+                        &lt;style&gt;
+                          html, body {
+                            margin: 0;
+                            padding: 0;
+                          }
+                        &lt;/style&gt;
+                      &lt;/head&gt;
+                      &lt;body&gt;
+                        &lt;script src=&quot;sketch.js&quot;&gt;&lt;/script&gt;
+                      &lt;/body&gt;
+                    &lt;/html&gt;
+                  </code>
+                </pre>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <span>(Don't worry about understanding this part for now, we'll go over it soon!)</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Setting up a p5.js Sketch</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Setting up sketch.js</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                5.<span>Make another file in your 'mySketch' folder called <code>sketch.js</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                6.<span>Inside of your <code>sketch.js</code> file, copy and paste the following code:</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    function setup() {
+                      createCanvas(400, 400);
+                    } 
+                    
+                    function draw() { 
+                      background(0, 0, 0);
+                    }
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Setting up a P5 Sketch</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span><code>createCanvas()</code> & <code>background()</code></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Functions sometimes have 'parameters' or 'arguments'</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Parameters are specified after a function's name, inside of parentheses, for example:</span>
+              </div>
+            </li>
+            <li><div class="list-item-container"></div></li>
+            <li>
+              <div class="list-item-container">
+                +<span><code>createCanvas(400, 400)</code> is a function that sets up a 'canvas' to hold your art</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><code>400, 400</code> are parameters specifying the dimensions of your canvas</span>
+              </div>
+            </li>
+            <li><div class="list-item-container"></div></li>
+            <li>
+              <div class="list-item-container">
+                +<span><code>background(0, 0, 0)</code> is a function that sets the background of your canvas</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><code>0, 0, 0</code> are 3 parameters that specify a color, in this case, black</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Running your first P5 Sketch</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>DEMO</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Go to the top of the Atom window, under packages find "atom-live-server"</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Click on "Start server"</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <img class="child-slide-img" src="https://cms-assets.tutsplus.com/uploads/users/53/posts/24348/image/startserver.png" width="600" height="auto"/>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Drawing Basic Shapes</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>The Coordinate System</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>(0, 0) starts at the top left corner of your canvas</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <img class="child-slide-img" src="https://camo.githubusercontent.com/b4955d469aa963843ec92b362c972baa9ca10cad/68747470733a2f2f737461746963312e73717561726573706163652e636f6d2f7374617469632f3536373435386564613132386536333732663963313635362f742f3537336364343465346430383865653538313130323132352f313436333630343332343137322f3f666f726d61743d3235303077" width="500" height="auto"/>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Drawing Basic Shapes</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span><code>ellipse(xPosition, yPosition, width, height)</code></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>You should see a white circle, white is the default fill color</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>We draw a circle at (150, 150), with a width and height of 100px</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    function setup() {
+                      createCanvas(400, 400);
+                    } 
+                    
+                    function draw() { 
+                      background(0, 0, 0);
+                      ellipse(150, 150, 100, 100);
                     }
                   </code>
                 </pre>
@@ -234,16 +510,38 @@
         <h5>Drawing Basic Shapes</h5>
         <div class="sub-head">
           <div class="sub-head-text">
-            <span></span>
+            <span><code>rect(topLeftX, topLeftY, bottomRightX, bottomRightY)</code></span>
           </div>
         </div>
         <div class="child-slide-body">
           <ul class="child-slide-body-list">
             <li>
               <div class="list-item-container">
+                +<span>You should see a white rectangle, white is the default fill color</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>We draw a rectangle using the top left corner and bottom right corner coordinates</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>top left corner at (50, 50), bottom right corner at (250, 100)</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
                 <pre>
                   <code data-trim data-noescape>
+                    function setup() {
+                      createCanvas(400, 400);
+                    } 
                     
+                    function draw() { 
+                      background(0, 0, 0);
+                      rect(50, 50, 250, 100);
+                    }
                   </code>
                 </pre>
               </div>
@@ -307,5 +605,5 @@
   // ---------------------------------------------
 </script>
 
-<script src="../js/sketch_1.js"></script>
+<!-- <script src="../js/sketch_1.js"></script> -->
 </html>

@@ -7,15 +7,17 @@ var particles = [];
 var ctx;
 
 function setup() {
-  ctx = createCanvas(500, 500);  
+  ctx = createCanvas(windowWidth, windowHeight);  
   colorMode(HSB, 100);
   blendMode(ADD);
   noStroke();
   background(0,0,0);  
-  ctx.parent('example-1');
+  // ctx.parent('example-1');
 }
 
 function draw() {
+  // push();
+  // translate(mouseX/2, mouseY);
   clear();
   background(0,0,0);  
   offsetAngle += 0.05;
@@ -35,6 +37,7 @@ function draw() {
 	while(particles.length > 1000) {
     particles.shift();
   }
+  // pop();
 }
 
 function makeParticles(pcount, mx, my) {
