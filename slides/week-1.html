@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="../css/theme/black.css">
   <link rel="stylesheet" href="../lib/css/zenburn.css">
   <link rel="stylesheet" href="../css/custom.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
 </head>
 
 <body>
@@ -74,18 +76,29 @@
         <h5>Environment Setup</h5>
         <div class="sub-head">
           <div class="sub-head-text">
-            <span>What you need:</span>
+            <span>What you need to install:</span>
           </div>
         </div>
         <div class="child-slide-body">
           <ul class="child-slide-body-list">
             <li>
               <div class="list-item-container">
-                <pre>
-                  <code data-trim data-noescape>
-                    
-                  </code>
-                </pre>
+                +<span>A web browser: <a href="https://www.google.com/chrome/" target="_blank">Chrome</a></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>A text editor: <a href="https://atom.io/" target="_blank">Atom Text Editor</a></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Atom Package: <a href="https://atom.io/packages/atom-beautify" target="_blank">Beautify</a></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Atom Package: <a href="https://atom.io/packages/atom-live-server" target="_blank">Atom Live Server</a></span>
               </div>
             </li>
           </ul>
@@ -104,11 +117,22 @@
           <ul class="child-slide-body-list">
             <li>
               <div class="list-item-container">
-                <pre>
-                  <code data-trim data-noescape>
-                    
-                  </code>
-                </pre>
+                +<span>Code is <b>a set of instructions</b> that you write to get your computer to do something</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>You write these instructions in a <b>programming language</b>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>In this class we will be writing <b>javascript</b> code
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Javascript is the language of the web. It lets us make webpages interactive!
               </div>
             </li>
           </ul>
@@ -127,14 +151,51 @@
           <ul class="child-slide-body-list">
             <li>
               <div class="list-item-container">
-                <pre>
-                  <code data-trim data-noescape>
-                    
-                  </code>
-                </pre>
+                <img class="child-slide-img" src="https://pbs.twimg.com/profile_images/502135348663578624/-oslcYof.png" width="200" height="200" />
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <span>p5.js is a javascript <b>library</b> for making interactive visual art on the web</span>
               </div>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>P5.js Art</h5>
+        
+        <div class="child-slide-body">
+          <img class="child-slide-img" src="https://media.giphy.com/media/tYkbBpApbNF7y/giphy.gif" width="500" height="500" />
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>P5.js Art</h5>
+        
+        <div class="child-slide-body">
+          <img class="child-slide-img" src="https://media.giphy.com/media/11vEWOJjVtHsB2/giphy.gif" width="500" height="500" />
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>P5.js Art</h5>
+        
+        <div class="child-slide-body">
+          <img class="child-slide-img" src="https://media.giphy.com/media/CGoH1rv2USFva/giphy.gif" width="500" height="500" />
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide" id="example-1">
+        <h5>P5.js Art (move your mouse around!)</h5>
+        
+        <div class="child-slide-body">
+          
         </div>
       </section>
 
@@ -152,7 +213,13 @@
               <div class="list-item-container">
                 <pre>
                   <code data-trim data-noescape>
-                    
+                    void setup() {                                
+
+                    }
+
+                    void draw() {
+
+                    }
                   </code>
                 </pre>
               </div>
@@ -236,6 +303,18 @@
     });
   
   }
+
+  var sketch = function(p) {
+    p.setup = function(){
+      p.createCanvas(500, 500);
+      p.background(13, 13, 29);
+    }
+  };
+
+  // example 1
+  var node = document.createElement('div');
+  document.getElementById('example-1').appendChild(node);
+  new p5(sketch, node);
 </script>
 
 </html>
