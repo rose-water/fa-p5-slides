@@ -23,8 +23,9 @@ body {
 .header {
   text-transform: uppercase;
   color: darkslateblue;
-  height: 40px;
+  height: 150px;
   margin-bottom: 50px;
+  letter-spacing: 0.8px;
   font-family: 'Kosugi Maru', sans-serif;
   text-align: center;
 }

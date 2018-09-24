@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <title>Into to Creative Coding</title>
+  
+  <link rel="stylesheet" href="../css/reveal.css">
+  <link rel="stylesheet" href="../css/theme/black.css">
+  <link rel="stylesheet" href="../lib/css/zenburn.css">
+  <link rel="stylesheet" href="../css/custom.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      
+      <!-- ------------- -->
+      <section class="title-slide">
+        <h3 class="title-text">Intro to Creative Coding</h3>
+        <div class="sub-head">
+          <div class="sub-head-text"><span>Class 2: 09/25/18</span></div>
+        </div>
+      </section>
+      
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Agenda</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>What we're doing today:</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Review</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Drawing Basic Shapes (continued)</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Introducing Randomness</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Repeating Forms: Manually</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Repeating Forms: For Loops</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Basic Animation</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Constraining bounds: If-then conditionals</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Review</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>What did we go over last week?</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Setting up a p5.js sketch</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><code>setup()</code> and <code>draw()</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Drawing basic shapes</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Color: Fill & Stroke</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Setup a new p5.js sketch!</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Create a folder on your desktop called mySketch-2</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Refer to last week's <a href="https://rose-water.github.io/fa-p5-slides/slides/week-1.html#/10" target="_blank">slides</a> for reference :)</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Make sure you have added your <code>setup()</code> and <code>draw() </code>functions</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Double check everything is working with atom live server</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+  
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Drawing Basic Shapes (continued)</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Other Primitive Shapes</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    function setup() {
+                      createCanvas(400, 400);                                                
+                      background(0);
+                    } 
+                    
+                    function draw() {
+                      stroke(255, 255, 0);
+                      <mark>line(220, 300, 350, 370);</mark>
+                      
+                      noStroke();
+
+                      fill(0, 255, 255);
+                      <mark>triangle(20, 20, 50, 360, 220, 360);</mark>
+
+                      fill(255, 0, 255);
+                      <mark>quad(200, 18, 240, 40, 216, 150, 144, 165);</mark>
+                    }
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Introducing Randomness</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span><a href="https://p5js.org/reference/#/p5/random" target="_blank">Reference</a>: <code>random()</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><code>random()</code> returns a <b>floating point number</b></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><code>random()</code> without params returns a value between 0 and 1 (e.g., 0.5108338863145219)</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><code>random(someNum)</code> returns a value between 0 and someNum</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><code>random(someNum)</code> returns a value between 0 and someNum</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Introducing Randomness</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Color</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    function setup() {
+                      createCanvas(400, 400);
+                      noStroke();
+
+                      // this lets us slow down the sketch!
+                      frameRate(10);
+                    }
+                    
+                    function draw() {
+                      background(240);
+                      <mark>fill(random(0), random(255), random(255));</mark>           
+                      ellipse(200, 200, 100, 100);
+                    }
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Introducing Randomness</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Size</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    function setup() {
+                      createCanvas(400, 400);
+                      noStroke();
+
+                      // this lets us slow down the sketch!
+                      frameRate(10);
+                    }
+                    
+                    function draw() {
+                      background(240);
+                      fill(100, 140, 255);
+                      <mark>ellipse(200, 200, random(100), random(100));</mark>   
+                    }
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Repeating Forms: Manually</h5>
+        
+        <div class="child-slide-body">
+          
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Repeating Forms: Intro to For Loops</h5>
+        
+        <div class="child-slide-body">
+          
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Basic Animation</h5>
+        
+        <div class="child-slide-body">
+         
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Constraining Bounds: If-then conditionals</h5>
+        
+        <div class="child-slide-body">
+         
+        </div>
+      </section>
+
+      
+      <!-- ------------- -->
+      <section class="child-slide">
+      <h5>Try at home!</h5>
+      <div class="sub-head">
+        <div class="sub-head-text">
+          <span>Play around with these exercises</span>
+        </div>
+      </div>
+      <div class="child-slide-body">
+        <ul class="child-slide-body-list">
+          <li>
+            <div class="list-item-container">
+              +<span>Mess around with shapes: sizes, colors</span>
+            </div>
+          </li>
+          <li>
+            <div class="list-item-container">
+              +<span>Draw 10 circles next to each other, with different colors</span>
+            </div>
+          </li>
+          <li>
+            <div class="list-item-container">
+              +<span>Explore the <a href="https://p5js.org/reference/" target="_blank">reference</a> online (don't be intimidated! ☺️)</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- END SLIDES -->
+    </div>
+  </div>
+</body>
+
+<script src="../lib/js/head.min.js"></script>
+<script src="../js/reveal.js"></script>
+<script>
+  // ---------------------------------------------
+  init();
+ 
+  // ---------------------------------------------
+  function init() {
+    Reveal.initialize({
+      dependencies: [
+      { 
+        src: '../plugin/highlight/highlight.js', 
+        async: true, 
+        callback: function() { hljs.initHighlightingOnLoad(); } 
+      }
+      ]
+    });
+    
+    Reveal.configure({
+      slideNumber: true,
+      slideNumber: 'c/t'
+    });
+  }
+
+  // ---------------------------------------------
+</script>
+
+<!-- <script src="../js/sketch_1.js"></script> -->
+</html>
