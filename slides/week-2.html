@@ -55,7 +55,7 @@
             </li>
             <li>
               <div class="list-item-container">
-                +<span>Repeating Forms: Manually</span>
+                +<span>Repeating Forms: By Hand</span>
               </div>
             </li>
             <li>
@@ -216,7 +216,7 @@
             </li>
             <li>
               <div class="list-item-container">
-                +<span><code>random(someNum)</code> returns a value between 0 and someNum</span>
+                +<span><code>random(min, max)</code> returns a value between min (inclusive) and max (exclusive)</span>
               </div>
             </li>
           </ul>
@@ -275,8 +275,6 @@
                     function setup() {
                       createCanvas(400, 400);
                       noStroke();
-
-                      // this lets us slow down the sketch!
                       frameRate(10);
                     }
                     
@@ -296,17 +294,110 @@
 
       <!-- ------------- -->
       <section class="child-slide">
-        <h5>Repeating Forms: Manually</h5>
-        
+        <h5>Variables</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>What if we want the same random value<br/>for making perfect circles?</span>
+          </div>
+        </div>
         <div class="child-slide-body">
-          
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>We use variables to store values</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>This example uses a <b>variable</b>, <code>randomDiameter</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    function setup() {
+                      createCanvas(400, 400);
+                      noStroke();
+                      frameRate(10);
+                    }
+                    
+                    function draw() {
+                      background(240);
+                      fill(100, 140, 255);
+
+                      // We do this because random() returns a different random value
+                      // every time random() is called
+                      <mark>let randomDiameter = random(100);</mark>
+                      <mark>ellipse(200, 200, randomDiameter, randomDiameter);</mark>
+                    }
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Repeating Forms: By Hand</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>How do we draw 10 circles?</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <span>Try it yourself first! Use a variable for diameter.</span>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Repeating Forms: By Hand</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>How do we draw 10 circles?</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <pre>
+            <code data-trim data-noescape>
+              function setup() {
+                createCanvas(400, 400);
+                noStroke();
+                frameRate(10);
+              }
+              
+              function draw() {
+                background(240);
+                fill(100, 140, 255);
+                
+                let d = 30;
+                ellipse(40, 200, d, d);
+                ellipse(75, 200, d, d);
+                ellipse(110, 200, d, d);
+                ellipse(145, 200, d, d);
+                ellipse(180, 200, d, d);
+                ellipse(215, 200, d, d);
+                ellipse(250, 200, d, d);
+                ellipse(285, 200, d, d);
+                ellipse(320, 200, d, d);
+                ellipse(355, 200, d, d);
+              }
+            </code>
+          </pre>
         </div>
       </section>
 
       <!-- ------------- -->
       <section class="child-slide">
         <h5>Repeating Forms: Intro to For Loops</h5>
-        
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>How do we draw 10 circles?</span>
+          </div>
+        </div>
         <div class="child-slide-body">
           
         </div>
