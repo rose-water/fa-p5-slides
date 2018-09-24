@@ -60,7 +60,7 @@
             </li>
             <li>
               <div class="list-item-container">
-                +<span>Repeating Forms: For Loops</span>
+                +<span>Repeating Forms: Using For Loops</span>
               </div>
             </li>
             <li>
@@ -70,7 +70,7 @@
             </li>
             <li>
               <div class="list-item-container">
-                +<span>Constraining bounds: If-then conditionals</span>
+                +<span>Constraining bounds: If statements</span>
               </div>
             </li>
           </ul>
@@ -160,7 +160,11 @@
                 <pre>
                   <code data-trim data-noescape>
                     function setup() {
-                      createCanvas(400, 400);                                                
+                      createCanvas(400, 400);
+                      
+                      // recall that we set colors with 3 values, for r, g, and b
+                      // we can also set the same value for all three at once;
+                      // this will give us a grayscale color
                       background(0);
                     } 
                     
@@ -392,36 +396,214 @@
 
       <!-- ------------- -->
       <section class="child-slide">
-        <h5>Repeating Forms: Intro to For Loops</h5>
+        <h5>Repeating Forms: Using For Loops</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>So we don't have to repeat ourselves a lot!</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Instead of writing <code>ellipse(xPos, yPos, d, d)</code> ten times,</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>We can use something called a <code>for loop</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Notice that we are starting at 0, which is very common in programming</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    // We can break this first line into three parts:
+
+                    // let i = 0 means we start our loop at 0
+                    // i &lt; 10 means we will stop looping when we reach 9
+                    // i++ means that every time we loop, we will increment i by 1
+
+                    for (let i = 0; i &lt; 10; i++) {
+                      print(i);
+                      // 0
+                      // 1
+                      // 2
+                      // ...
+                      // 9
+                    }
+                  </code>
+                </pre>
+              </div>
+            </li>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Repeating Forms: By Hand</h5>
         <div class="sub-head">
           <div class="sub-head-text">
             <span>How do we draw 10 circles?</span>
           </div>
         </div>
         <div class="child-slide-body">
-          
+          <pre>
+            <code data-trim data-noescape>
+              function setup() {
+                createCanvas(400, 400);
+                noStroke();
+                frameRate(10);
+              }
+              
+              function draw() {
+                background(240);
+                fill(100, 140, 255);
+                
+                let d = 30; // circle diameter
+                let startX = 40; // x coord for our first circle
+
+                for (let i = 0; i &lt; 10; i++) {
+                  ellipse(startX, 200, d, d);
+
+                  // we want to update the x position for each circle drawn
+                  startX += 35;
+                }
+              }
+            </code>
+          </pre>
         </div>
       </section>
 
       <!-- ------------- -->
       <section class="child-slide">
         <h5>Basic Animation</h5>
-        
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Moving a circle (what's missing?)</span>
+          </div>
+        </div>
         <div class="child-slide-body">
-         
+          <pre>
+            <code data-trim data-noescape>
+              var xPos; // starting x position
+              var yPos; // starting y position
+              
+              function setup() {
+                createCanvas(400, 400);
+                background(0);
+              
+                // assign our x and y positions
+                x = 200;
+                y = 200;
+              }
+              
+              function draw() {
+                fill(125, 0, 255);
+              
+                // Draw a circle
+                stroke(255, 0, 255);
+                strokeWeight(2);
+                ellipse(x, y, 40, 40);
+              
+                // Moving up at a constant speed
+                y = y - 5;
+              }
+            </code>
+          </pre>
         </div>
       </section>
 
       <!-- ------------- -->
       <section class="child-slide">
-        <h5>Constraining Bounds: If-then conditionals</h5>
-        
+        <h5>Basic Animation</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Moving a circle</span>
+          </div>
+        </div>
         <div class="child-slide-body">
-         
+          <pre>
+            <code data-trim data-noescape>
+              var xPos; // starting x position
+              var yPos; // starting y position
+              
+              function setup() {
+                createCanvas(400, 400);
+              
+                // assign our x and y positions
+                x = 200;
+                y = 200;
+              }
+              
+              function draw() {
+                // recall that draw() gets called repeatedly
+                // so to 'clear' our canvas, we reset the background each time
+                background(0);
+                fill(125, 0, 255);
+              
+                // Draw a circle
+                stroke(255, 0, 255);
+                strokeWeight(2);
+                ellipse(x, y, 40, 40);
+              
+                // Moving up at a constant speed
+                y = y - 5;
+              }
+            </code>
+          </pre>
         </div>
       </section>
 
-      
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Constraining Bounds: If statements</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>How can we keep our circle in view?</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <pre>
+            <code data-trim data-noescape>
+              var xPos; // starting x position
+              var yPos; // starting y position
+              
+              function setup() {
+                createCanvas(400, 400);
+              
+                // assign our x and y positions
+                x = 200;
+                y = 200;
+              }
+              
+              function draw() {
+                background(0);
+                fill(0, 125, 255);
+              
+                // Draw a circle
+                stroke(0, 255, 255);
+                strokeWeight(2);
+                ellipse(x, y, 40, 40);
+              
+                // Moving up at a constant speed
+                y = y - 5;
+                
+                // Here we check if the circle has moved offscreen
+                <mark>if (y &lt;= 0) {</mark>
+                  <mark>y = 400;</mark>
+                <mark>}</mark>
+              }
+            </code>
+          </pre>
+        </div>
+      </section>
+
       <!-- ------------- -->
       <section class="child-slide">
       <h5>Try at home!</h5>
@@ -434,17 +616,41 @@
         <ul class="child-slide-body-list">
           <li>
             <div class="list-item-container">
-              +<span>Mess around with shapes: sizes, colors</span>
+              +<span>Mess around with randomness, for sizes and colors</span>
             </div>
           </li>
           <li>
             <div class="list-item-container">
-              +<span>Draw 10 circles next to each other, with different colors</span>
+              +<span>Try to update the x position for the circle in the last example</span>
             </div>
           </li>
           <li>
             <div class="list-item-container">
-              +<span>Explore the <a href="https://p5js.org/reference/" target="_blank">reference</a> online (don't be intimidated! ☺️)</span>
+              +<span>Add another <code>if statement</code> for the x position!</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ------------- -->
+    <section class="child-slide">
+      <h5>Questions?</h5>
+      <div class="sub-head">
+        <div class="sub-head-text">
+          <span>How to get help</span>
+        </div>
+      </div>
+      <div class="child-slide-body">
+        <ul class="child-slide-body-list">
+          <li>
+            <div class="list-item-container">
+              +<span>Email: rachel.ulgado@gmail.com</span>
+            </div>
+          </li>
+          <li>
+            <div class="list-item-container">
+              +<span>Ask me questions over email, or we can schedule a chat before class! :)</span>
             </div>
           </li>
         </ul>
